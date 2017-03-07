@@ -166,6 +166,7 @@ namespace CefSharp.Example.RequestEventHandler
         }
 
         private void ExecuteEventHandler<T>(EventHandler<T> handler, T args)
+            where T : EventArgs
         {
             if (handler != null)
             {

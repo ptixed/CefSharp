@@ -41,7 +41,7 @@ namespace CefSharp.Wpf.Example
                 browserContainer.Content = null;
                 oldBrowser.Dispose();
             }
-            await Task.Delay(10);
+            await TaskEx.Delay(10);
 
             ChromiumWebBrowser browser = new ChromiumWebBrowser()
             {
@@ -64,7 +64,7 @@ namespace CefSharp.Wpf.Example
                 for (int i = 0; i < itemList.Items.Count; i++)
                 {
                     itemList.SelectedIndex = i;
-                    await Task.Delay((int)(MAX_SPEED * speedSlider.Value));
+                    await TaskEx.Delay((int)(MAX_SPEED * speedSlider.Value));
                     if (_requestCancel)
                         break;
                 }

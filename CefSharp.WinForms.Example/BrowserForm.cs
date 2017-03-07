@@ -339,7 +339,7 @@ namespace CefSharp.WinForms.Example
                     {
                         MessageBox.Show("Unexpected failure of calling CEF->GetZoomLevelAsync: " + previous.Exception.ToString());
                     }
-                }, TaskContinuationOptions.HideScheduler);
+                });
             }
         }
 

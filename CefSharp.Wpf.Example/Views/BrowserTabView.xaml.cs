@@ -16,6 +16,8 @@ using System.IO;
 
 namespace CefSharp.Wpf.Example.Views
 {
+    using System;
+
     public partial class BrowserTabView : UserControl
     {
         //Store draggable region if we have one - used for hit testing
@@ -107,12 +109,12 @@ namespace CefSharp.Wpf.Example.Views
 
         private void UpdateDownloadAction(string downloadAction, DownloadItem downloadItem)
         {
-            this.Dispatcher.InvokeAsync(() =>
+            this.Dispatcher.BeginInvoke((Action)(() =>
             {
                 var viewModel = (BrowserTabViewModel)this.DataContext;
                 viewModel.LastDownloadAction = downloadAction;
                 viewModel.DownloadItem = downloadItem;
-            });
+            }));
         }
 
         private void OnBrowserMouseLeftButtonDown(object sender, MouseButtonEventArgs e)

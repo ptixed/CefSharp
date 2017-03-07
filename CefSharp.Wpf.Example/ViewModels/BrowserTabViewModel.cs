@@ -18,77 +18,77 @@ namespace CefSharp.Wpf.Example.ViewModels
         public string Address
         {
             get { return address; }
-            set { Set(ref address, value); }
+            set { Set("Address", ref address, value); }
         }
 
         private string addressEditable;
         public string AddressEditable
         {
             get { return addressEditable; }
-            set { Set(ref addressEditable, value); }
+            set { Set("AddressEditable", ref addressEditable, value); }
         }
 
         private string outputMessage;
         public string OutputMessage
         {
             get { return outputMessage; }
-            set { Set(ref outputMessage, value); }
+            set { Set("OutputMessage", ref outputMessage, value); }
         }
 
         private string statusMessage;
         public string StatusMessage
         {
             get { return statusMessage; }
-            set { Set(ref statusMessage, value); }
+            set { Set("StatusMessage", ref statusMessage, value); }
         }
 
         private string title;
         public string Title
         {
             get { return title; }
-            set { Set(ref title, value); }
+            set { Set("Title", ref title, value); }
         }
 
         private IWpfWebBrowser webBrowser;
         public IWpfWebBrowser WebBrowser
         {
             get { return webBrowser; }
-            set { Set(ref webBrowser, value); }
+            set { Set("WebBrowser", ref webBrowser, value); }
         }
 
         private object evaluateJavaScriptResult;
         public object EvaluateJavaScriptResult
         {
             get { return evaluateJavaScriptResult; }
-            set { Set(ref evaluateJavaScriptResult, value); }
+            set { Set("EvaluateJavaScriptResult", ref evaluateJavaScriptResult, value); }
         }
 
         private bool showSidebar;
         public bool ShowSidebar
         {
             get { return showSidebar; }
-            set { Set(ref showSidebar, value); }
+            set { Set("ShowSidebar", ref showSidebar, value); }
         }
 
         private bool showDownloadInfo;
         public bool ShowDownloadInfo
         {
             get { return showDownloadInfo; }
-            set { Set(ref showDownloadInfo, value); }
+            set { Set("ShowDownloadInfo", ref showDownloadInfo, value); }
         }
 
         private string lastDownloadAction;
         public string LastDownloadAction
         {
             get { return lastDownloadAction; }
-            set { Set(ref lastDownloadAction, value); }
+            set { Set("LastDownloadAction", ref lastDownloadAction, value); }
         }
 
         private DownloadItem downloadItem;
         public DownloadItem DownloadItem
         {
             get { return downloadItem; }
-            set { Set(ref downloadItem, value); }
+            set { Set("DownloadItem", ref downloadItem, value); }
         }
 
         public ICommand GoCommand { get; private set; }

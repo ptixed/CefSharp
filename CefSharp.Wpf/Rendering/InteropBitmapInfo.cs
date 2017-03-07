@@ -60,8 +60,7 @@ namespace CefSharp.Wpf.Rendering
         {
             if (Bitmap != null)
             {
-                var sourceRect = new Int32Rect(DirtyRect.X, DirtyRect.Y, DirtyRect.Width, DirtyRect.Height);
-                Bitmap.Invalidate(sourceRect);
+                Bitmap.Invalidate();
             }
         }
 

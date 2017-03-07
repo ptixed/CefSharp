@@ -48,9 +48,9 @@ namespace CefSharp.Example
         {
             const int taskDelay = 500;
 
-            Task.Run(async () =>
+            TaskEx.Run(async () =>
             {
-                await Task.Delay(taskDelay);
+                await TaskEx.Delay(taskDelay);
 
                 using (errorCallback)
                 {

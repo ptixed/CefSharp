@@ -12,7 +12,7 @@ namespace CefSharp.Example
     {
         public override bool ProcessRequestAsync(IRequest request, ICallback callback)
         {
-            Task.Run(() =>
+            TaskEx.Run(() =>
             {
                 using (callback)
                 {

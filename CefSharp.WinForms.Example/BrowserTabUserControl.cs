@@ -212,7 +212,7 @@ namespace CefSharp.WinForms.Example
                 // which running in a different thread we have to use a NativeWindow
                 if (multiThreadedMessageLoopEnabled)
                 {
-                    Task.Run(() =>
+                    TaskEx.Run(() =>
                     {
                         try
                         {

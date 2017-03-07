@@ -54,9 +54,9 @@ namespace CefSharp.Example
         {
             const int taskDelay = 1500;
 
-            Task.Run(async () =>
+            TaskEx.Run(async () =>
             {
-                await Task.Delay(taskDelay);
+                await TaskEx.Delay(taskDelay);
 
                 using (javascriptCallback)
                 {
@@ -83,9 +83,9 @@ namespace CefSharp.Example
 
             const int taskDelay = 1500;
 
-            Task.Run(async () =>
+            TaskEx.Run(async () =>
             {
-                await Task.Delay(taskDelay);
+                await TaskEx.Delay(taskDelay);
 
                 if (javascriptCallback != null)
                 {
